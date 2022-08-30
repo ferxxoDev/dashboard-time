@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    font-size: 18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    background-color: var(--Very-dark-blue);
+    
+}
+.container{
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    width: 13rem;
+    
+
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    min-height: 4rem;
+  
+}
+
+.user-info-photo {
+    
+    height: 3rem;
+    padding: 1rem 0.5rem 1rem 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    overflow: hidden;
+}
+.user-info-photo img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.reported-of {
+    font-size: 0.5rem;
+    color: var(--Pale-Blue);
+
+}
+.name-user {
+    font-size: 0.8rem;
+    color: var(--Pale-Blue);
+}
+.user-info-title-name{
+    color:white;
+    font-weight: 300;
+}
+
+.user-period-buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    
+    
+}
+.user-button{
+    background-color: var(--Dark-blue);
+    text-decoration: none;
+    border: none;
+    color: var(--Desaturated-blue);
+    font-size: 0.6rem;
+}
+.user-button:hover{
+    color: var(--Pale-Blue);
+    transition: 0.1s;
+}
+
+
+.box-content {
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem ;
+    margin-top: 1.2rem;    
+}
+.options-svg {
+    width: 1rem;
+}
+.box-header, .data-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+    color: white;
+}
+
+.box-background:nth-child(2) {
+    background-color: var(--Light-red-work);
+    border-radius: 10px;
+    background-image: url(/images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;
+
+}
+.box-background:nth-child(3) {
+    background-color: var(--Soft-blue-play);
+    border-radius: 10px;
+    background-image: url(/images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;
+}
+.box-background:nth-child(4) {
+    background-color: var(--Light-red-study);
+    border-radius: 10px;
+    background-image: url(/images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;
+}
+.box-background:nth-child(5) {
+    background-color: var(--Lime-green-exercise);
+    border-radius: 10px;
+    background-image: url(/images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;
+}
+.box-background:nth-child(6) {
+    background-color: var(--Violet-social);
+    border-radius: 10px;
+    background-image: url(/images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;
+}
+.box-background:nth-child(7) {
+    background-color: var(--Soft-orange-self-care);
+    border-radius: 10px;
+    background-image: url(/images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -20%;    
+}
+
+.box-header p {
+    font-size: 0.7rem;
+}
+.data-box-hours {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.data-box-prev {
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: var(--Pale-Blue);
+}
+
+@media (min-width: 600px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        
+    }
+    .box-background{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .box-content{
+        
+        height: 5rem;
+        gap: 1rem;
+    }
+    .user{
+        width: auto;
+        grid-column: 1 /3;
+        grid-row: 1 / 2;
+    }
+    .work{
+        grid-column: 1 /2;
+        grid-row: 2 / 3;
+    }
+    .play{
+        grid-column: 2 /3;
+        grid-row: 2 / 3;
+    }
+    .study{
+        grid-column: 1 /2;
+        grid-row: 3 / 4;
+    }
+    .exercise{
+        grid-column: 2 /3;
+        grid-row: 3 / 4;
+    }
+    .social{
+        grid-column: 1 /2;
+        grid-row: 4 / 5;
+    }
+    .self-care{
+        grid-column: 2 /3;
+        grid-row: 4 / 5;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container{
+        height: 20rem;
+        margin-top: 5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
+    .box-background{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .user-info-photo{
+        height: 5rem;
+        width: 5rem;
+    }
+    .user-info{
+        display: flex;
+        height: 13rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 1rem;
+        gap: 1rem;
+    }
+    .name-user{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .box-content{
+        
+        height: 7.6rem;
+        
+    }
+    .data-box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .data-box-hours{
+        font-size: 2.5rem;
+        gap: 0.5rem;
+        
+    }
+    .user-period-buttons{
+        flex-direction: column;
+        align-items: flex-start;
+       gap: 1rem;
+    }
+    .user{
+        
+        width: 10rem;
+        height: 100%;
+        grid-column: 1 /2;
+        grid-row: 1 / 3;
+    }
+    .work{
+        grid-column: 2 /3;
+        grid-row: 1 / 2;
+    }
+    .play{
+        grid-column: 3 /4;
+        grid-row: 1 / 2;
+    }
+    .study{
+        grid-column: 4 /5;
+        grid-row: 1 / 2;
+    }
+    .exercise{
+        grid-column: 2 /3;
+        grid-row: 2 / 3;
+    }
+    .social{
+        grid-column: 3 /4;
+        grid-row: 2 /3;
+    }
+    .self-care{
+        grid-column: 4 /5;
+        grid-row: 2 /3;
+    }
+
+
+}
